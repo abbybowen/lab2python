@@ -1,29 +1,33 @@
-grade = input("Enter your CMPSC 131 grade: ")
-grade = float(grade)
-if grade >= 93.0:
-  lettergrade = "A"
-  print("Your letter grade for CMPSC 131 is A.")
-elif grade >= 90.0:
-  lettergrade = "A-"
-  print("Your letter grade for CMPSC 131 is A-.")
-elif grade >= 87.0:
-  lettergrade = "B+"
-  print("Your letter grade for CMPSC 131 is B+.")
-elif grade >= 83.0:
-  lettergrade = "B"
-  print("Your letter grade for CMPSC 131 is B.")
-elif grade >= 80.0:
-  lettergrade = "B-"
-  print("Your letter grade for CMPSC 131 is B-.")
-elif grade >= 77.0:
-  lettergrade = "C+"
-  print("Your letter grade for CMPSC 131 is C+.")
-elif grade >= 70.0:
-  lettergrade = "C"
-  print("Your letter grade for CMPSC 131 is C.")
-elif grade >= 60.0:
-  lettergrade = "D"
-  print("Your letter grade for CMPSC 131 is D.")
-elif grade < 60.0:
-  lettergrade = "F"
-  print("Your letter grade for CMPSC 131 is F.")
+# Author: Abigail Bowen aeb6095@psu.edu
+# Collaborator: David Orndorf dbo5077@psu.edu
+# Collaborator: Sujay Kandwal sfk5645@psu.edu
+# Section: 6
+# Breakout: 12
+def run():
+  number = input("Enter your CMPSC 131 grade: ")
+  number = float(number)
+  grade = getLetterGrade(number)
+  print(f"Your letter grade for CMPSC 131 is {grade}.")
+
+def getLetterGrade(g):
+    if g >= 93.0:
+      return "A"
+    elif g >= 90.0:
+      return "A-"
+    elif g >= 87.0:
+      return "B+"
+    elif g >= 83.0:
+      return "B"
+    elif g >= 80.0:
+      return "B-"
+    elif g >= 77.0:
+      return "C+"
+    elif g >= 70.0:
+      return "C"
+    elif g >= 60.0:
+      return "D"
+    elif g < 60.0:
+      return "F"
+
+if __name__ == "__main__":
+    run()
